@@ -23,6 +23,6 @@ map.on('click', function(e) {
           .addTo(map);
       });
 
-      map.addControl(new MapboxDirections({
+map.addControl(new MapboxDirections({
         accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g'
         }), 'top-left');
