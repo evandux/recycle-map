@@ -22,7 +22,8 @@ map.on('click', function(e) {
           .setHTML('<h3>' + feature.properties.name + '</h3><p>' + 'glass: ' + feature.properties.glass + '</p>')
           .addTo(map);
       });
-
+/*
 map.addControl(new MapboxDirections({
         accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g'
         }), 'top-left');
+        */
