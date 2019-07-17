@@ -6,6 +6,7 @@ center: [-115.99,49.6773783], // starting position [lng, lat]
 zoom: 13 // starting zoom
 });
 
+// Load recycling bin layer from Mapbox
 map.on('click', function(e) {
         var features = map.queryRenderedFeatures(e.point, {
           layers: ['recycle-points'] // replace this with the name of the layer  
@@ -24,11 +25,14 @@ map.on('click', function(e) {
       });
 
 // Add direction functionality for user
-map.addControl(new MapboxDirections({
-        accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g'
-        }), 'top-left');
+var directions = new MapboxDirections({
+  accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g',
+  unit: 'metric',
+  interactive: 'false',
+  placeholderOrigin: 'Choose a location to start from'
+});
 
-//geolocation of user
+// Geolocate user
 map.addControl(new mapboxgl.GeolocateControl({
   positionOptions: {
     enableHighAccuracy: true,
@@ -36,3 +40,5 @@ map.addControl(new mapboxgl.GeolocateControl({
   },
   trackUserLocation: true
   }));
+
+// map.addControl(directions, 'top-left');
