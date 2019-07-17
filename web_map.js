@@ -22,8 +22,17 @@ map.on('click', function(e) {
           .setHTML('<h3>' + feature.properties.name + '</h3><p>' + 'glass: ' + feature.properties.glass + '</p>')
           .addTo(map);
       });
-/*
+
+// Add direction functionality for user
 map.addControl(new MapboxDirections({
         accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g'
         }), 'top-left');
-        */
+
+//geolocation of user
+map.addControl(new mapboxgl.GeolocateControl({
+  positionOptions: {
+    enableHighAccuracy: true,
+    showUserLocation: true
+  },
+  trackUserLocation: true
+  }));
