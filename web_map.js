@@ -42,5 +42,3 @@ map.addControl(new mapboxgl.GeolocateControl({
   },
   trackUserLocation: true
   }));
-
-// map.addControl(directions, 'top-left');
