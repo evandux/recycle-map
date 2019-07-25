@@ -20,7 +20,7 @@ map.on('click', function(e) {
       
         var popup = new mapboxgl.Popup({ offset: [0, -15] })
           .setLngLat(feature.geometry.coordinates)
-          .setHTML('<h3>' + feature.properties.name + '</h3><p>' + 'glass: ' + feature.properties.glass + '</p>')
+          .setHTML('<b><p>' + feature.properties.name + '</p></b><p>' + 'glass: ' + feature.properties.glass + '</p>')
           .addTo(map);
       });
 
