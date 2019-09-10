@@ -1,7 +1,7 @@
-mapboxgl.accessToken = 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g';
+mapboxgl.accessToken = '<your access token here>';
 var map = new mapboxgl.Map({
 container: 'map', // container id
-style: 'mapbox://styles/evandux/cjy563cud0ekp1cp9brkn4kdd', // stylesheet location
+style: '<style url here>', // stylesheet location
 center: [-115.99,49.6773783], // starting position [lng, lat]
 zoom: 13 // starting zoom
 });
@@ -27,7 +27,7 @@ map.on('click', function(e) {
 // Add direction functionality for user
 /*
 var directions = new MapboxDirections({
-  accessToken: 'pk.eyJ1IjoiZXZhbmR1eCIsImEiOiJjanRnMmh6OXcwZDl6M3lvY292cG55ZGFlIn0.evy0JhSJp-d__Rp1Aerc6g',
+  accessToken: '<access token here>',
   unit: 'metric',
   interactive: 'false',
   placeholderOrigin: 'Choose a location to start from'
